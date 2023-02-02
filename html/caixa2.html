@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Suits | Menu Caixa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="../imagens/favicon-removebg-preview.png">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/matrix-style.css">
+  <link rel="stylesheet" href="../css/matrix-media.css">
+  <link rel="stylesheet" href="../css/sangria.css">
+
+</head>
+
+<body onload="layout()">
+
+  <!--MENU MOBILE-->
+  <nav id="sidebar">
+    <div id="newlog">
+      <div class="icon2">
+        <img src="../imagens/motel (1).png">
+      </div>
+      <div class="title1">
+        <h2>Suits</h2>
+      </div>
+    </div>
+    <a href="#" class="visible-phone">
+      <div class="mode">
+        <div class="moon-menu">
+          <iconify-icon icon="mdi:microsoft-xbox-controller-menu" width="40" height="40"
+            flip="horizontal"></iconify-icon>
+        </div>
+      </div>
+    </a>
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links" style="position: relative;">
+          <li>
+            <a data-toggle="tab" href="#caixa">
+              <span class="title nav-title">Caixa</span>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#debito">
+              <span class="title">Débito</span>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#credito">
+              <span class="title">Crédito</span>
+            </a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content">
+    <!--start-top-serch-->
+    <div id="content-header">
+      <!-- New Bem-vindos -->
+      <div class="bemv">
+        <h5 id="saudacao_usuario"></h5>
+      </div>
+      <div id="breadcrumb">
+        <a id="home" class="tip-bottom"> Início</a>
+        <a href="" class="current tip-bottom"> Menu Caixa </a>
+      </div>
+    </div>
+    <div class="container-flu">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="row-fluid" style="margin-top:0">
+            <div class="span12">
+              <div class="widget-box">
+                <div class="widget-title" style="margin: -20px 0 0">
+                  <span class="icon">
+                    <i class="fas fa-wrench"></i>
+                  </span>
+                  <h5>Menu Caixa</h5>
+                </div>
+
+                <!--MENU DESKTOP-->
+                <ul class="nav nav-tabs" id="desktop">
+                  <li>
+                    <a data-toggle="tab" href="#caixa">Caixa</a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#debito">Débito</a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#credito">Crédito</a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#lsangria">Sangrias</a>
+                  </li>
+                </ul>
+
+                <div class="widget-content nopadding tab-content">
+
+                  <!--CAIXA-->
+                  <div id="caixa" class="tab-pane fade">
+                    <table class="table table-bordered  dataTable no-footer" role="grid">
+                      <thead>
+                        <tr role="row">
+                          <th>Saldo</th>
+                      </thead>
+                      <tbody id="tab_saldo"></tbody>
+                    </table>
+                  </div>
+
+                  <!--DÉBITO-->
+                  <div id="debito" class="tab-pane fade">
+                    <table class="table table-bordered  dataTable no-footer" role="grid">
+                      <thead>
+                        <tr role="row">
+                          <th>Nota</th>
+                          <th>Valor</th>
+                      </thead>
+                      <tbody id="tab_debito"></tbody>
+                    </table>
+                  </div>
+
+                  <!--CRÉDITO-->
+                  <div id="credito" class="tab-pane fade">
+                    <table class="table table-bordered  dataTable no-footer" role="grid">
+                      <thead>
+                        <tr role="row">
+                          <th>Nota</th>
+                          <th>Valor</th>
+                          <th>Parcelas</th>
+                      </thead>
+                      <tbody id="tab_credito"></tbody>
+                    </table>
+                  </div>
+
+                  <!--CRÉDITO-->
+                  <div id="lsangria" class="tab-pane fade">
+                    <table class="table table-bordered  dataTable no-footer" role="grid">
+                      <thead>
+                        <tr role="row">
+                          <th>Usuário</th>
+                          <th>Dia</th>
+                          <th>Hora</th>
+                          <th>Valor</th>
+                          <th>Antigo Caixa</th>
+                          <th>Novo Caixa</th>
+                      </thead>
+                      <tbody id="tab_sangria"></tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--LAYOUT-->
+  <script src="../js/jquery.js"></script>
+  <script src="https://kit.fontawesome.com/88ea2c002f.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <script src="../js/responsividade/home.js"></script>
+  <script src="../js/estilo/bootstrap.min.js"></script>
+  <script src="../js/estilo/matrix.js"></script>
+  <script src="../js/estilo/nomes.js"></script>
+  <script type="module" src="../js/caixa/inicializado.js"></script>
+  <!--FUNÇÕES DO CAIXA-->
+  <script type="module" src="../js/caixa/sangria/sangria.js"></script>
+  <script type="module" src="../js/caixa/read/caixa.js"></script>
+  <script type="module" src="../js/caixa/updat/sangria.js"></script>
+  <!--VALIDAÇÃO-->
+  <script src="../js/setup/validacao.js"></script>
+</body>
+
+</html>

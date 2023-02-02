@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Suits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../imagens/favicon-removebg-preview.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/matrix-style.css">
+    <link rel="stylesheet" href="../css/matrix-media.css">
+    <link rel="stylesheet" href="../css/camareiras.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body>
+    <!--top-Header-menu-->
+    <div class="navebarn">
+        <div id="user-nav" class="navbar navbar-inverse"></div>
+        <!-- New User -->
+        <div id="userr"
+            style="padding-right:45px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;">
+            <div class="user-names userT0" id="saudacao_usuario"></div>
+            <div class="userT" id="usuario_sistema"></div>
+            <section style="display:block;position:absolute;right:10px">
+                <div class="profile">
+                    <div class="profile-img">
+                        <a>
+                            <img src="../imagens/a2c0e016d91ff61639ec3d6cfea18e02.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="content">
+        <!--start-top-serch-->
+        <div id="content-header">
+            <!-- New Bem-vindos -->
+            <div class="bemv">Dashboard</div>
+            <div id="breadcrumb">
+                <a class="current tip-bottom">Administração</a>
+            </div>
+        </div>
+        <div class="container-flu">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="row-fluid" style="margin-top:0">
+                        <div class="span12">
+                            <div class="widget-box">
+                                <div class="widget-title" style="margin: -20px 0 0">
+                                    <span class="icon">
+                                        <i class="fas fa-wrench"></i>
+                                    </span>
+                                    <h5>Usuários</h5>
+                                </div>
+                                <!--Tabs-->
+                                <ul class="nav nav-tabs">
+                                    <!--Usuários-->
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#listauser">Usuários</a>
+                                    </li>
+                                    <!--Cadastro-->
+                                    <li>
+                                        <a data-toggle="tab" href="#newuser">Cadastro</a>
+                                    </li>
+                                </ul>
+
+                                <div class="widget-content nopadding tab-content">
+
+                                    <!--Usuários-->
+                                    <div id="listauser" class="tab-pane fade in active">
+
+                                        <form action="" method="post" class="form-horizontal" id="">
+
+                                            <div id="" class="">
+                                                <table id="" class="table table-bordered  dataTable no-footer"
+                                                    role="grid">
+                                                    <thead>
+                                                        <tr role="row">
+                                                            <th>Usuário</th>
+                                                            <th>Vencimento</th>
+                                                            <th>Status</th>
+                                                            <th>Ações</th>
+                                                    </thead>
+                                                    <tbody id="tabela_debito"></tbody>
+                                                    <tbody id="tabela_credito"></tbody>
+                                                </table>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                    <!--Usuários-->
+
+                                    <!--Cadastro-->
+                                    <div id="newuser" class="tab-pane fade">
+
+                                        <form action="" method="post" class="form-horizontal" id="formEmail">
+                                            <!--Usuário-->
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <input type="text" id="nu_usuario" placeholder="Usuário">
+                                                </div>
+                                            </div>
+
+                                            <!--Senha-->
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <input type="text" id="nu_senha" placeholder="Senha">
+                                                    <button type="button" class="btn btn-info" id="gnp">Gerar senha provisória</button>
+                                                </div>
+                                            </div>
+
+                                            <!--Vencimento-->
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <select id="nu_vencimento">
+                                                        <option value="" hidden> Vencimento</option>
+                                                        <option value="">05</option>
+                                                        <option value="">10</option>
+                                                        <option value="">15</option>
+                                                        <option value="">20</option>
+                                                        <option value="">25</option>
+                                                        <option value="">30</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!--Botões-->
+                                            <div class="form-actions">
+                                                <div class="span8">
+                                                    <div class="span9">
+                                                        <button type="button" class="button btn btn-primary"
+                                                            id="nu_adicionar">
+                                                            <span class="button__icon">
+                                                                <i class="fa-solid fa-floppy-disk"></i>
+                                                            </span>
+                                                            <span class="button__text2">Adicionar</span>
+                                                        </button>
+                                                        <button type="reset" class="button btn btn-danger">
+                                                            <span class="button__icon">
+                                                                <i class="fa-solid fa-xmark"></i>
+                                                            </span>
+                                                            <span class="button__text2">Limpar</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <!--Cadastro-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modau-camareiras" class="modau-container">
+        <div class="modau">
+            <button class="fechar">X</button>
+            <h3 id="titulo_caixa">Ações</h3>
+            <form id="formEdit" name="formEdit">
+
+
+                <button type="button" name="botao" class="btn btn-warning" id="camareira_limpeza"
+                    value="">Atualizar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modau-menu" class="modau-container">
+        <div class="modau">
+            <button class="fechar">X</button>
+            <h3 id="titulo_menu"></h3>
+            <form id="menu" name="menu">
+
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/estilo/bootstrap.min.js"></script>
+<script src="../js/estilo/matrix.js"></script>
+<script src="../js/estilo/nomes.js"></script>
+<script src="https://kit.fontawesome.com/88ea2c002f.js" crossorigin="anonymous"></script>
+
+
+<script src="./js/adm/box2/senha.js"></script>
+<script type="module" src="./js/adm/box2/usuario.js"></script>
+
+</html>
